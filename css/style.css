@@ -110,7 +110,7 @@ body {
     }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 975px) {
     body.disabled {
         overflow: hidden;
     }
@@ -127,13 +127,16 @@ body {
         position: fixed;
         height: 100vh;
         width: 100%;
-        max-width: 400px;
+        /* max-width: 400px; */
         left: -100%;
         top: 0px;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 40px 0;
         text-align: center;
-        background: #222;
+        background: #fff;
         transition: all 0.3s ease;
     }
 
@@ -153,6 +156,10 @@ body {
 
     .navbar.show .menu-list li a {
         margin-left: 0px;
+    }
+
+    .nav-btn .hero-btn {
+        margin: 0 auto;
     }
 }
 
@@ -216,6 +223,46 @@ body {
     color: #13c041;
 }
 
+@media(max-width: 1360px) {
+    .hero-section {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media(max-width: 600px) {
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-family: Exo2;
+        color: #13c041;
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+}
+
+@media(max-width: 480px) {
+    .hero-section {
+        height: 80vh;
+    }
+
+    .hero-content {
+        height: 80vh;
+        margin-left: 20px;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+        font-size: 40px;
+    }
+
+    .hero-btn button {
+        font-size: 12px;
+    }
+}
+
 /*==================================== Intro Section ================================*/
 .intro-content {
     max-width: 600px;
@@ -237,6 +284,27 @@ body {
 
 .intro-content .hero-btn {
     margin: 0 auto;
+}
+
+@media(max-width: 600px) {
+    .intro-content h1 {
+        font-size: 35px;
+    }
+
+    .intro-content img {
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px) {
+    .intro-content h1 {
+        font-size: 25px;
+    }
+
+    .intro-content p {
+        font-size: 12px;
+        margin-top: 10px;
+    }
 }
 
 
@@ -293,7 +361,67 @@ body {
     width: 300px;
 }
 
+@media(max-width: 910px) {
+    .about-content {
+        max-width: 700px;
+    }
 
+    .about-target-img img {
+        width: 250px;
+    }
+}
+
+@media(max-width: 860px) {
+    .about-target-img {
+        display: none;
+    }
+}
+
+@media(max-width: 750px) {
+    .about-bg {
+        margin-top: 60px;
+        height: 30vh;
+    }
+
+    .about-content {
+        max-width: 550px;
+        transform: translateY(0px);
+        margin-top: -100px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 600px) {
+    .about-con h1 {
+        font-size: 35px;
+    }
+
+    .about-con p {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .about-con a {
+        font-size: 12px;
+    }
+
+    .about-content {
+        max-width: 450px;
+    }
+}
+
+@media(max-width: 480px) {
+    .about-con h1 {
+        font-size: 25px;
+    }
+
+    .about-content {
+        max-width: 350px;
+        padding: 20px;
+        margin-top: -130px;
+    }
+
+}
 
 /*================================= Service Section ============================*/
 .service-help-con {
@@ -356,6 +484,67 @@ body {
     text-decoration: none;
 }
 
+@media(max-width: 815px) {
+    .card {
+        flex-basis: 50%;
+    }
+}
+
+@media(max-width: 600px) {
+    .service-help-con h1 {
+        font-size: 35px;
+    }
+
+    .service-list {
+        margin-top: 20px;
+    }
+
+    .card h1 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 500px) {
+    .service-help-con h1 {
+        font-size: 25px;
+    }
+
+    .service-help-con p {
+        font-size: 12px;
+    }
+
+    .service-list {
+        margin-top: 0px;
+    }
+
+    .card h1 {
+        font-size: 15px;
+    }
+
+    .card img {
+        width: 30px;
+    }
+
+    .card p,
+    .card a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 480px) {
+    .service-help-con h1 {
+        font-size: 25px;
+    }
+
+    .service-help-con p {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 5px;
+    }
+}
+
 /*================================== Result Section ============================*/
 .result-section {
     height: 80vh;
@@ -380,6 +569,7 @@ body {
 
 .counter-sec {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
 }
@@ -417,10 +607,43 @@ body {
     margin: auto;
 }
 
+@media(max-width: 600px) {
+    .counter-sec div {
+        flex-basis: 50%;
+        margin: 0 auto;
+    }
+
+    .counter-sec div:nth-child(2) {
+        border: none;
+    }
+}
+
+@media(max-width: 480px) {
+    .counter-sec div {
+        flex-basis: 80%;
+        margin: 0 auto;
+        border-bottom: 1px solid #fff !important;
+        border-right: none;
+    }
+
+    .result-content h1 {
+        font-size: 25px;
+    }
+
+    .result-con p {
+        line-height: 1.5;
+    }
+
+    .counter-sec {
+        margin-top: 10px;
+    }
+}
+
 
 /*=================================== Testimonials ==============================*/
 .tm-section {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: 80px auto;
     text-align: center;
 }
@@ -478,21 +701,48 @@ body {
 }
 
 .free-re-books {
-    width: 100%;
+    width: 100vw;
+    /* padding: 0 20px; */
     max-width: 880px;
     display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    overflow-x: auto;
+    overflow: auto;
 }
 
 .free-re-con .hero-btn {
     margin: 20px auto;
 }
 
-.free-re-books .fr-b-img img {
-    width: 200px;
-    margin: 0 10px;
+.free-re-books .fr-b-img {
+    margin: 0 20px;
 }
+
+.free-re-con .hero-btn button:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+@media(max-width: 600px) {
+    .free-re-con h1 {
+        font-size: 35px;
+    }
+
+    .free-re-section {
+        height: 60vh;
+    }
+}
+
+@media(max-width: 480px) {
+    .free-re-con h1 {
+        font-size: 25px;
+    }
+
+    .free-re-books .fr-b-img img {
+        width: 200px;
+    }
+}
+
 
 /*==================================== Container ================================*/
 .container {
@@ -503,4 +753,10 @@ body {
 
 .sample {
     height: 100vh;
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 0 5px;
+    }
 }
